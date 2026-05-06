@@ -1,0 +1,73 @@
+{
+  "repo": "depglass",
+  "language": "C#",
+  "category": "Developer tools",
+  "goal": "Explore dependency graphs, cycle detection, and topological layers.",
+  "review_model": {
+    "terms": [
+      "change width",
+      "diagnostic quality",
+      "review cost",
+      "safe rewrite"
+    ],
+    "lanes": [
+      "ship",
+      "watch",
+      "hold"
+    ],
+    "score": "signal * 2 + slack + confidence - drag * 3",
+    "purpose": "surface the domain-specific cases that need the most careful review"
+  },
+  "cases": [
+    {
+      "name": "baseline",
+      "focus": "change width",
+      "signal": 58,
+      "slack": 44,
+      "drag": 11,
+      "confidence": 61,
+      "score": 188,
+      "lane": "ship"
+    },
+    {
+      "name": "stress",
+      "focus": "diagnostic quality",
+      "signal": 81,
+      "slack": 43,
+      "drag": 16,
+      "confidence": 49,
+      "score": 206,
+      "lane": "ship"
+    },
+    {
+      "name": "edge",
+      "focus": "review cost",
+      "signal": 76,
+      "slack": 54,
+      "drag": 21,
+      "confidence": 83,
+      "score": 226,
+      "lane": "ship"
+    },
+    {
+      "name": "recovery",
+      "focus": "safe rewrite",
+      "signal": 78,
+      "slack": 39,
+      "drag": 32,
+      "confidence": 92,
+      "score": 191,
+      "lane": "ship"
+    },
+    {
+      "name": "stale",
+      "focus": "change width",
+      "signal": 91,
+      "slack": 38,
+      "drag": 29,
+      "confidence": 94,
+      "score": 227,
+      "lane": "ship"
+    }
+  ]
+}
