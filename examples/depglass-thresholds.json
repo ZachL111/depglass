@@ -1,0 +1,17 @@
+{
+  "repo": "depglass",
+  "thresholds": {
+    "signal": 4,
+    "slack": 2,
+    "confidence": 1,
+    "drag": 5,
+    "ship": 175,
+    "watch": 113
+  },
+  "terms": [
+    "change width",
+    "diagnostic quality",
+    "review cost",
+    "safe rewrite"
+  ]
+}

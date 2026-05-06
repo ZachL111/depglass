@@ -58,3 +58,13 @@ foreach ($pathPattern in $knownPaths) {
 dotnet run -- --test
 
 powershell -NoProfile -ExecutionPolicy Bypass -File scripts/check-depglass-detail.ps1
+
+if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+
+if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+
+powershell -NoProfile -ExecutionPolicy Bypass -File scripts/check-depglass-properties.ps1
+if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+
+powershell -NoProfile -ExecutionPolicy Bypass -File scripts/check-depglass-golden.ps1
+if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
